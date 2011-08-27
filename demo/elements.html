@@ -1,63 +1,29 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title>Element Consistency Tests</title>
+  <meta rel="dns-prefetch" href="//ajax.googleapis.com">
+  <meta rel="dns-prefetch" href="//fonts.googleapis.com">
+  <title></title>
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <!-- CSS: implied media=all -->
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* box-sizing test */
-    #boxsize button,
-    #boxsize input,
-    #boxsize select,
-    #boxsize textarea {
-      width: 200px;
-      padding: 4px;
-      border: 1px solid #333;
-    }
-  </style>
-
-<!-- All JavaScript at the bottom, except for Modernizr / Respond.
-     Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-     For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <link rel="stylesheet" href="../css/master.css">
+  <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <link rel="stylesheet" href="../css/ie.css">
+  <![endif]-->
   <script src="../js/libs/modernizr-2.0.6.min.js"></script>
 </head>
-
-<body>
-
+<body data-controller="main" data-action="home">
   <div id="container">
-
-      <!--
-           demo content lovingly lifted from the azbuka project
-           http://code.google.com/p/azbuka/
-
-           and the bluetrip project
-           http://bluetrip.org/
-
-           and the normalize.css project
-           http://github.com/necolas/normalize.css
-
-           and peter beverloo
-           http://peter.sh/examples/?/html/meter-progress.html
-      -->
-
     <header>
       <hgroup>
         <h1>Grouped Heading 1</h1>
@@ -418,76 +384,14 @@
         <meter id="meter-javascript-example" value="0"></meter>
       </li>
     </ul>
-
-    <script>
-      (function () {
-        if (! ("position" in document.createElement ("progress"))) {
-          var elements = document.querySelectorAll ("meter, progress");
-          for (var i = 0, j = elements.length; i < j; i++) {
-            elements [i].style.border = "1px solid red";
-            elements [i].style.height = "12px";
-            elements [i].style.display = "inline-block";
-            elements [i].style.webkitAppearance = "none";
-          }
-          return ;
-        }
-
-      document.getElementById ("no-support").style.display = "none";
-
-        /** Setup the <progress> JavaScript example **/
-        var progressExample = document.getElementById ("progress-javascript-example");
-        progressExample.min = 50;
-        progressExample.max = 122;
-
-        setInterval (function () {
-          progressExample.value = progressExample.min + Math.random () * (progressExample.max - progressExample.min);
-        }, 1000);
-
-        /** We'd like some fancy <meter> examples too **/
-        var meterExample = document.getElementById ("meter-javascript-example");
-        meterExample.min = 0;
-        meterExample.max = 100;
-        meterExample.value = 50;
-        meterExample.low  = 20;
-        meterExample.high = 80;
-        meterExample.optimum = 65;
-
-        setInterval (function () {
-          meterExample.value   = meterExample.min + Math.random () * (meterExample.max - meterExample.min);
-          meterExample.optimum = 65 + (5 - Math.random () * 10);
-        }, 1000);
-      })();
-    </script>
-
-  </div> <!--! end of #container -->
-
-
-  <!-- Javascript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
-  <!-- scripts concatenated and minified via ant build script-->
   <script defer src="../js/plugins.js"></script>
   <script defer src="../js/script.js"></script>
-  <!-- end scripts-->
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7 ]>
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
-
 </body>
 </html>
