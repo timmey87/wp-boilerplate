@@ -1,5 +1,9 @@
 #  HTML5 Boilerplate [http://html5boilerplate.com](http://html5boilerplate.com)
 
+My take on the fantastic HTML5 Boilerplate by Paul Irish. I've added a
+few things that I find useful, like Compass/SASS and CoffeeScript, and
+removed some things that I probably won't utilize.
+
 ## Changelog:
 
 ### v.2.0 : August 10th, 2011
