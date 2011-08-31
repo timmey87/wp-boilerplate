@@ -12,23 +12,23 @@ value. For example:
 
 #### Possible configuration options
 
-`section`
+section
 : String
-`subsection`
+subsection
 : String
-`weather`
+weather
 : ?
-`subnav`
+subnav
 : Boolean
-`hotTopics`
+hotTopics
 : Boolean
-`search`
+search
 : Boolean
-`utilityLinks`
+utilityLinks
 : Boolean
-`userTools`
+userTools
 : Boolean
-`adMenu`
+adMenu
 : Boolean
-`adTiffanyTile`
+adTiffanyTile
 : Boolean
