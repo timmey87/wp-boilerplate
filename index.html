@@ -5,24 +5,33 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
+
+  <!-- Prefetch all the base domain of all assets for speed -->
   <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//media.washingtonpost.com">
   <link rel="dns-prefetch" href="//media3.washingtonpost.com">
+
   <title></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="master.css">
+
+  <!-- Facebook sharing options -->
   <meta property="og:title" content="">
   <meta property="og:description" content="">
   <meta property="og:image" content="">
+
+  <!-- SEO stuff -->
   <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="stylesheet" href="master.css">
+  <meta name="author" content="The Washington Post">
+
   <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="imagetoolbar" content="no">
   <![endif]-->
-  <!-- Remove Mondernizer if you don't need it -->
-  <script src="modernizr-2.0.6.min.js"></script>
+
+  <!-- Modernizr -->
+  <!-- <script src="modernizr-2.0.6.min.js"></script> -->
 </head>
 <body data-controller="main" data-action="home">
   <div id="container">
@@ -32,11 +41,17 @@
     </div>
     <div id="footer-v3-external" data-config=""></div>
   </div>
-  <!-- Remove below if you don't need any custom scripts -->
+  <script src="//www.washingtonpost.com/wpost/js/combo?context=wpost&amp;m=true&amp;c=true&amp;r=/yui-base/3.3.0/build/yui/yui-min.js&amp;r=/yui-base/twp-yui/twp-yui.js&amp;r=/yui-base/global/global-external-modules.js"></script>
+
   <!-- Loads jQuery from the Google CDN, falls back to local copy -->
+  <!--
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-  <script defer src="script.js"></script>
+  -->
+
+  <!-- Custom script -->
+  <!-- <script defer src="script.js"></script> -->
+
   <!-- Asks IE6 users to use the Google Frame plugin -->
   <!--[if lt IE 7 ]>
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

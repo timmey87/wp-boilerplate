@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "css"
-images_dir = "img"
-javascripts_dir = "js"
+css_dir = ""
+sass_dir = ""
+images_dir = ""
+javascripts_dir = ""
 
 # Added below to use 960.gs
 require 'ninesixty'

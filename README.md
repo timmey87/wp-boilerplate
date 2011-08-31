@@ -33,7 +33,14 @@ value. For example:
 
 ### General Style Guidelines
 
-* Use double-quotes for HTML, single-quotes for JS
-* Don't add trailing slashes for self-closing tags (`img`, `link`,
-  `meta`, etc.)
-* Use protocol-relative links (`//goo.gl` instead of `http://goo.gl`)
+* Use double-quotes for HTML, single-quotes for JS. This is to
+  reference/create HTML within JS more cleanly (`$('<div id="hello"></div>')`)
+* For consistency, don't add trailing slashes for self-closing tags 
+  (`img`, `link`, `meta`, etc.).
+* Use protocol-relative links (`//goo.gl` instead of `http://goo.gl`).
+  This prevents alert messages when mixing HTTP/HTTPS content. (Note:
+  this will cause problems when referencing assets while
+  testing on a local machine, since it will try to use the `file://`
+  protocol. It's recommended to test on a WAMP/MAMP stack.
+* Use two spaces for indentation instead of tabs. Some editors treat
+  tabs differently, and space-indented files will always look the same.
