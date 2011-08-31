@@ -1,15 +1,59 @@
-$ninesixty-columns: 16
-$grid-background-total-columns: $ninesixty-columns
-$grid-background-column-width: 40px
-
 @import _normalize
-@import 960/grid
-@import compass/layout
+@import compass/css3
 @import compass/typography
-@import compass/utilities/sprites
+@import compass/utilities
+
+@mixin font-serif
+  font-family: Georgia, Times, "Times New Roman", serif
+
+@mixin font-sans-serif
+  font-family: Helvetica, Arial, sans-serif
+
+body
+  +font-sans-serif
+  background: #e3e1e4
+  color: #262626
+  line-height: 20px
+
+h1, h2, h3, h4, h5, h6
+  +font-serif
+
+$container-width: 980px
 
 #container
-  +grid-container
+  background: #fff
+  margin: 0 auto
+  padding: 5px 10px
+  width: $container-width
+  #header-v3, #content, #footer-v3, #header-v3 #main-nav-wrapper .rollMe
+    a
+      +link-colors(#000, #057ec2)
+      +transition-property(all)
+      +transition-duration(.3s)
+  #header-v3
+    +min-height(180px)
+  #content
+    +clearfix
+    margin-bottom: 10px
+    a
+      font-weight: 700
+      text-decoration: none
+    #main
+      +float-left
+      margin-right: 10px
+      width: floor(($container-width / 3) * 2 - 10px)
+    #sidebar
+      +float-right
+      width: floor($container-width / 3)
+  #footer-v3
+    +min-height(390px)
+    ul.normal li
+      color: #057fc1
+      font-size: 10px
+      list-style: square inside
+      padding-left: 0
+      a
+        font-size: 12px
 
 @media only screen and (min-width: 480px)
   // Style adjustments for viewports 480px and over go here

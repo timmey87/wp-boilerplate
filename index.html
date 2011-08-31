@@ -7,8 +7,8 @@
   <meta charset="utf-8">
 
   <!-- Prefetch all the base domain of all assets for speed -->
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <!-- <link rel="dns-prefetch" href="//ajax.googleapis.com"> -->
+  <!-- <link rel="dns-prefetch" href="//fonts.googleapis.com"> -->
   <link rel="dns-prefetch" href="//media.washingtonpost.com">
   <link rel="dns-prefetch" href="//media3.washingtonpost.com">
 
@@ -20,6 +20,8 @@
   <meta property="og:title" content="">
   <meta property="og:description" content="">
   <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="The Washington Post">
 
   <!-- SEO stuff -->
   <meta name="description" content="">
@@ -32,21 +34,36 @@
 
   <!-- Modernizr -->
   <!-- <script src="modernizr-2.0.6.min.js"></script> -->
-</head>
-<body data-controller="main" data-action="home">
-  <div id="container">
-    <div id="header-v3-external" data-config=""></div>
-    <div id="content">
-
-    </div>
-    <div id="footer-v3-external" data-config=""></div>
-  </div>
   <script src="//www.washingtonpost.com/wpost/js/combo?context=wpost&amp;m=true&amp;c=true&amp;r=/yui-base/3.3.0/build/yui/yui-min.js&amp;r=/yui-base/twp-yui/twp-yui.js&amp;r=/yui-base/global/global-external-modules.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header-v3" class="external" data-config=""></div>
+    <div id="content">
+      <div id="main">
+        <h1>Test</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis
+          turpis eget leo consectetur porttitor. Aenean purus elit, bibendum
+          vitae consectetur vel, imperdiet vel lectus. Etiam placerat sagittis
+          sagittis. Fusce sed enim urna. Phasellus ut rhoncus massa.
+        </p>
+        <ul>
+          <li><a href='#test1'>Hello world</a></li>
+          <li><a href='#test2'>Foo bar</a></li>
+        </ul>
+      </div>
+      <div id="sidebar">
+        <p>Sidebar content</p>
+      </div>
+    </div>
+    <div id="footer-v3" class="external" data-config=""></div>
+  </div>
 
   <!-- Loads jQuery from the Google CDN, falls back to local copy -->
   <!--
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="jquery-1.6.2.min.js"><\/script>')</script>
   -->
 
   <!-- Custom script -->
@@ -57,5 +74,33 @@
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
+
+  <!-- Ugly site trafficing code -->
+  <script>
+    var wp_hierarchy = "nocategory";
+    var wp_channel="nocategory"; 
+  </script>
+  <script src="//js.revsci.net/gateway/gw.js?csid=J05531"></script> 
+  <script src="//media.washingtonpost.com/wp-srv/ad/audsci.js"></script>
+  <script>
+    if (typeof otto != "undefined") {
+      otto.placeGlobalOttoTest();
+    }
+  </script>
+  <script src="//media.washingtonpost.com/wp-srv/javascript/omniture/omniture-utils.js"></script>
+  <script>
+    try {
+      echoOmniture()
+    } catch (e) {}
+  </script>
+  <script src="//media.washingtonpost.com/wp-srv/javascript/placeSiteMetrix.js"></script>
+  <script>
+    placeSiteMetrix();
+  </script> 
+  <script defer src="//media3.washingtonpost.com/wp-srv/javascript/wapolabs-partners.js"></script> 
+  <script defer src="//media3.washingtonpost.com/wp-srv/js/vendor/quantcast.js"></script>
+  <noscript>
+    <img hidden src="//pixel.quantserve.com/pixel/p-5cYn7dCzvaeyA.gif" alt="">
+  </noscript>
 </body>
 </html>
