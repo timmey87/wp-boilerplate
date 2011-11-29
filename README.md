@@ -2,6 +2,14 @@ A shell of the Washington Post website. Built on a modified version of
 the HTML5 boilerplate by Paul Irish, with Compass/SASS and CoffeeScript
 support.
 
+If you'd like to use the HTML5 boilerplate with Compass/SASS and 
+CoffeeScript, but without the WaPo header and footer, see [this fork](https://github.com/bcurry/html5-boilerplate).
+
+The `develop.py` script is provided to help consolidate compiling SASS, CoffeeScript,
+ and start a simple HTTP server with Python. Run it just by
+
+    python develop.py
+
 ### Header
 
 The `#header-v3-external` element can be configured by adding an HTML5

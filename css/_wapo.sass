@@ -1,5 +1,4 @@
 @import _normalize
-@import 960/grid
 @import compass
 
 @mixin font-serif
@@ -12,94 +11,127 @@ body
   +font-sans-serif
   background: #e3e1e4
   color: #262626
+  font-size: 12px
   line-height: 20px
 
 h1, h2, h3, h4, h5, h6
   +font-serif
 
-$container-width: 960px
+h1
+  font-size: 25px
 
 #container
   +box-shadow(0 0 15px #999)
   background: #fff
   margin: 0 auto
-  width: $container-width
+  width: 960px
+
   #header-v3, #content, #footer-v3, #header-v3 #main-nav-wrapper .rollMe
+
     a
       +link-colors(#000, #057ec2)
       +transition-property(all)
       +transition-duration(.5s)
+
       &:hover
         +text-shadow(0 0 3px #caecff)
+
   #header-v3
     +min-height(180px)
     border-bottom: 1px solid #000
     margin: 0 10px 10px
     padding: 5px 0 1px
+
     #main-nav
       +border-radius(3px)
+
       li
+
         a.top
           +text-shadow(0px -1px 1px #333)
+
         &.first
           background: none
+
         .rollMe
           +min-height(123px)
           padding-top: 0
+
           .rollMeInner
             +min-height(118px)
             padding: 10px 15px
+
     .hot-topics
       border-bottom: 2px solid #000
       border-top: 1px solid #e4e4e4
       padding: 0
+
       .search-wrap
+
         .search
+
           input.text
             +transition-property(all)
             +transition-duration(.3s)
             +box-shadow(1px 1px 1px #ccc inset)
             border-color: #ccc
+
             &:focus, &:active
               border-color: #999
               color: #000
               width: 280px
+
           input.button
             background-position: -1px -374px
             border: 1px solid #3f9ed1
             height: 22px
+
   #content
     +clearfix
     margin: 5px 10px
+
     a
       font-weight: 700
       text-decoration: none
+
     ul
+
       li
         list-style: square
-      
+
     #main
-      +grid(8)
-      +alpha
+      float: left
+      margin: 0 10px 0 0
+      width: 620px
+
     #sidebar
-      +grid(4)
-      +omega
+      float: left
+      margin: 0 0 0 10px
+      width: 300px
+
   #footer-v3
     +min-height(390px)
+
     .services, .partners, .tos
       padding: 10px 0 10px 20px
+
     .services
+
       .wp-column:first-child
         margin-right: 10px
+
         a
           font-weight: normal
+
     .tos
       padding-right: 20px
+
     ul.normal li
       color: #057fc1
       font-size: 10px
       list-style: square inside
       padding-left: 0
+
       a
         font-size: 12px
 
@@ -108,4 +140,3 @@ $container-width: 960px
 
 @media only screen and (min-width: 768px)
   // Style adjustments for viewports 768px and over go here
-
