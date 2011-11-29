@@ -1,4 +1,4 @@
-A shell of the Washington Post website. Built on a modified version of
+A shell of the [Washington Post website](http://www.washingtonpost.com). Built on a modified version of
 the HTML5 boilerplate by Paul Irish, with Compass/SASS and CoffeeScript
 support.
 
@@ -9,6 +9,13 @@ The `develop.py` script is provided to help consolidate compiling SASS, CoffeeSc
  and start a simple HTTP server with Python. Run it just by
 
     python develop.py
+
+Use the following command if you just want to use a simple HTTP server to serve
+the files from the current directory.
+
+    python -m SimpleHTTPServer
+
+Then go to [http://localhost:8000/](http://localhost:8000/) to see the server.
 
 ### Header
 
